@@ -1,0 +1,24 @@
+{
+  "name": "@gratitude-net/stacks-utils",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "eslint": "^7.32.0",
+    "@gratitude-net/eslint-config-custom": "*",
+    "react": "^17.0.2",
+    "@gratitude-net/tsconfig": "*",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@stacks/blockchain-api-client": "^5.0.0",
+    "@stacks/network": "^4.3.5",
+    "@stacks/transactions": "^4.3.5"
+  }
+}
