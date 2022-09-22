@@ -5,11 +5,8 @@ importers:
   .:
     specifiers:
       '@gratitude-net/eslint-config-custom': '*'
-      '@stacks/auth': ^4.3.5
       prettier: latest
       turbo: latest
-    dependencies:
-      '@stacks/auth': 4.3.5
     devDependencies:
       '@gratitude-net/eslint-config-custom': link:packages/eslint-config-custom
       prettier: 2.7.1
@@ -1167,20 +1164,6 @@ packages:
 
   /@stacks/auth/4.3.2:
     resolution: {integrity: sha512-8Ttq5dMmgVNUyaYR2q5pr3cIIiNHtD8HiVyB+Sui25T047twuWRKC5ZsxN6W28SPlLTGXKu/AFuDKoZDC6sAvQ==}
-    dependencies:
-      '@stacks/common': 4.3.5
-      '@stacks/encryption': 4.3.5
-      '@stacks/network': 4.3.5
-      '@stacks/profile': 4.3.5
-      cross-fetch: 3.1.5
-      jsontokens: 3.1.1
-      query-string: 6.14.1
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
-  /@stacks/auth/4.3.5:
-    resolution: {integrity: sha512-C2kV3V47TNmtmAhGnmM52i51TC0O6cANry2UCHAyBH+VAxW+MnN37cK3UeA9xsZhURst79aYFfxKtzxuvUN7fA==}
     dependencies:
       '@stacks/common': 4.3.5
       '@stacks/encryption': 4.3.5

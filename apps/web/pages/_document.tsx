@@ -1,5 +1,5 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import { AppContainer, ResponsiveAppBar } from "@gratitude-net/ui";
+import { Head, Html, Main, NextScript } from "next/document";
+import { AppContainer } from "@gratitude-net/ui";
 
 export default function Document() {
   return (

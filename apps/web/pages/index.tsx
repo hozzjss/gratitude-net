@@ -7,12 +7,7 @@ import {
 } from "@gratitude-net/stacks-utils";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { showConnect } from "@stacks/connect-react";
-import {
-  ClarityType,
-  compressPublicKey,
-  SomeCV,
-  StringAsciiCV,
-} from "@stacks/transactions";
+import { ClarityType } from "@stacks/transactions";
 
 export default function Web() {
   const login = useCallback(() => {
@@ -34,13 +29,15 @@ export default function Web() {
         const stxAddress = profile.stxAddress.testnet;
         setDisplayName(stxAddress);
         loadUserDisplayName(stxAddress).then(setDisplayName);
-        loadNftList(stxAddress).then(async (data) => {
-          const meta = await getNFTMeta(data[0].value.hex);
-          if (meta?.type === ClarityType.ResponseOk) {
-            console.log(meta.value.value.data);
-          } else {
-            console.log("Not found");
-          }
+        loadNftList(stxAddress).then((data) => {
+          data.results.forEach(async (item: any) => {
+            const meta = await getNFTMeta(item.value.hex);
+            if (meta?.type === ClarityType.ResponseOk) {
+              console.log(meta.value.value.data);
+            } else {
+              console.log("Not found");
+            }
+          });
         });
       }
     }

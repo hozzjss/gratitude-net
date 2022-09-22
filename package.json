@@ -23,6 +23,6 @@
   },
   "packageManager": "pnpm@7.11.0",
   "dependencies": {
-    "@stacks/auth": "^4.3.5"
+
   }
 }

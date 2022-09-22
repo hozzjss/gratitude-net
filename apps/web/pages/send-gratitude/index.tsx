@@ -1,9 +1,8 @@
-import { Input, Paper, Stack } from "@mui/material";
+import { Input, Stack } from "@mui/material";
 import { openContractCall } from "@stacks/connect-react";
 import {
-  bufferCV,
-  bufferCVFromString,
   noneCV,
+  PostConditionMode,
   someCV,
   stringAsciiCV,
 } from "@stacks/transactions";
@@ -24,8 +23,8 @@ export default function SendGratitude() {
       return;
     }
     openContractCall({
-      contractAddress: "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM",
-      contractName: "kindness-protocol",
+      contractAddress: "ST32AEEF6WW5Y0NMJ1S8SBSZDAY8R5J32N9D9WJ83",
+      contractName: "gratitude-protocol-v2",
       functionArgs: [
         // someCV(
         //   bufferCV(
@@ -42,6 +41,7 @@ export default function SendGratitude() {
       ],
       functionName: "mint",
       network,
+      postConditionMode: PostConditionMode.Allow,
     });
   }, [address]);
   return (
